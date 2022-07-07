@@ -28,12 +28,12 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-    	- name: Test with make test
+      - name: Test with make test
         run: |
           make test
   
   deploy:
-  	needs: test
-  	runs-on: ubuntu-latest
-  	steps:
-  		-name: deploy after fully testing
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: deploy after fully testing
