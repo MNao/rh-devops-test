@@ -10,3 +10,5 @@ marshmallow==3.10.0
 Flask-Cors==3.0.8
 Flask-Testing==0.8.1
 nose2==0.10.0
+Jinja2==3.0.3
+werkzeug==2.0.2
