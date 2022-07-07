@@ -21,10 +21,12 @@ jobs:
       - run: make test
       - name: build and run application
         run: make server
+        run: make clean
       - name: Test with make test
         run: make test
   
   deploy:
+    needs: build
     name: Deploy on aws after fully testing
     runs-on: ubuntu-latest
     environment: production
