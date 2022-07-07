@@ -29,7 +29,7 @@ jobs:
         uses: ylemkimon/cache-restore@v2
         with:
           path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('./backend/requirements.txt') }}
+          key: pip
       - run: make test
   
   deploy:
