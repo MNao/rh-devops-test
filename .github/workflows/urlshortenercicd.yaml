@@ -20,8 +20,9 @@ jobs:
       - run: pip install -r ./backend/requirements.txt
       - run: make test
       - name: build and run application
-        run: make server
-        run: make clean
+        run: |
+          make server
+          make clean
       - name: Test with make test
         run: make test
   
