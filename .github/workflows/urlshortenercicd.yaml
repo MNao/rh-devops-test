@@ -17,22 +17,13 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
           cache: 'pip'
-          path: ~/.cache/pip
-          key: pip
       - run: pip install -r ./backend/requirements.txt
       - name: Install dependencies
         run: python -m pip install --upgrade pip
       - name: build and run application
         run: make server
-  test:
-    runs-on: ubuntu-latest
-    steps:
       - name: Test with make test
-        uses: ylemkimon/cache-restore@v2
-        with:
-          path: ~/.cache/pip
-          key: pip
-      - run: make test
+        run: make test
   
   deploy:
     needs: build
