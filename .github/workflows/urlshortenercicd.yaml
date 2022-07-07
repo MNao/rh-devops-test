@@ -17,6 +17,8 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
           cache: 'pip'
+          path: ~/.cache/pip
+          key: pip
       - run: pip install -r ./backend/requirements.txt
       - name: Install dependencies
         run: python -m pip install --upgrade pip
