@@ -30,7 +30,7 @@ jobs:
         with:
           path: ~/.cache/pip
           key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
-        run: make test
+      - run: make test
   
   deploy:
     needs: build
