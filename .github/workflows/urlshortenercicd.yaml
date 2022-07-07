@@ -21,7 +21,6 @@ jobs:
       - name: build and run application
         run: make server
   test:
-    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Test with make test
